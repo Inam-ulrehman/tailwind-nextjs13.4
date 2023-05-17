@@ -12,6 +12,7 @@ export async function POST(request, res) {
   const { email, password } = body
 
   const result = await sample.find({})
+
   if (!result)
     return NextResponse.json({ success: false, msg: 'empty' }, { status: 201 })
 
@@ -26,6 +27,6 @@ export async function GET(request, res) {
   await dbConnect()
   const result = await sample.find({})
 
-  return NextResponse.json({ msg: 'hello' }, { status: 201 })
+  return NextResponse.json({ msg: 'hello', result }, { status: 200 })
 }
 // ============================== //
