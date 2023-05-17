@@ -2,9 +2,12 @@ import Link from 'next/link'
 import List from './list'
 
 async function getData() {
-  const res = await fetch('http://localhost:3000/api/v1/samples/static', {
-    // next: { revalidate: 10 },
-  })
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_WEBSITE}/api/v1/samples/static`,
+    {
+      // next: { revalidate: 10 },
+    }
+  )
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
