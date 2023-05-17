@@ -22,8 +22,8 @@ async function getData() {
 }
 
 const Sample = async () => {
-  const data = await getData()
-  console.log(data)
+  // const data = await getData()
+
   return (
     <div>
       <Link className='pr-3 ' href={'/samples'}>
