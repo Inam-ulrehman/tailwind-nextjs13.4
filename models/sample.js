@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const SampleSchema = new mongoose.Schema(
+const Sample = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -64,4 +64,6 @@ const SampleSchema = new mongoose.Schema(
   { timestamps: true }
 )
 
-export default mongoose.models.Sample || mongoose.model('Sample', SampleSchema)
+export default Sample
+
+// export default mongoose.models.Sample || mongoose.model('Sample', SampleSchema)
