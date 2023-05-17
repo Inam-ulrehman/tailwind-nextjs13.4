@@ -2,7 +2,7 @@ import { revalidatePath } from 'next/cache'
 
 import React from 'react'
 import { AddButton } from './addButton'
-import sample from '@/models/Sample'
+import sample from '@/models/sample'
 
 async function getData() {
   const res = await fetch('http://localhost:3000/api/v1/samples')

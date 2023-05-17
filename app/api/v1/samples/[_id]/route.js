@@ -1,6 +1,6 @@
 import dbConnect from '@/lib/dbConnect'
 import mongooseErrorHandler from '@/lib/mongoose-error-handler'
-import sample from '@/models/Sample'
+import sample from '@/models/sample'
 
 import { NextResponse } from 'next/server'
 
