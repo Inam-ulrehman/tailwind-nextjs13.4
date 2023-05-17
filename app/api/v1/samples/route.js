@@ -1,5 +1,5 @@
 import dbConnect from '@/lib/dbConnect'
-import { sample } from '../../../../models/Sample'
+import sample from '@/models/sample'
 
 import { NextResponse } from 'next/server'
 
