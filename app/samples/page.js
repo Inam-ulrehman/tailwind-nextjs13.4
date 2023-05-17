@@ -8,6 +8,7 @@ async function getData() {
       // next: { revalidate: 10 },
     }
   )
+
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
@@ -22,7 +23,7 @@ async function getData() {
 
 const Sample = async () => {
   const data = await getData()
-
+  console.log(data)
   return (
     <div>
       <Link className='pr-3 ' href={'/samples'}>
@@ -32,7 +33,7 @@ const Sample = async () => {
         home
       </Link>
       <h1>Details</h1>
-      {/* <List data={data} /> */}
+      <List data={data} />
     </div>
   )
 }
