@@ -5,19 +5,27 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "autoprefixer": "10.4.14",
+    "bcryptjs": "^2.4.3",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
+    "http-status-codes": "^2.2.0",
+    "jose": "^4.14.4",
+    "js-cookie": "^3.0.5",
+    "moment": "^2.29.4",
     "mongoose": "^7.1.1",
     "next": "13.4.2",
+    "next-sitemap": "^4.0.9",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
     "react-redux": "^8.0.5",
     "tailwindcss": "3.3.2"
   }
