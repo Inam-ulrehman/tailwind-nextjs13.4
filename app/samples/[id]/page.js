@@ -6,11 +6,11 @@ async function getProduct(id) {
   return res.json()
 }
 
-export async function generateMetadata({ params }) {
-  const product = await getProduct(params.id)
+// export async function generateMetadata({ params }) {
+//   const product = await getProduct(params.id)
 
-  return { title: product.result.name }
-}
+//   return { title: product.result.name }
+// }
 const Page = ({ params }) => {
   return (
     <div>
