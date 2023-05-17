@@ -6,6 +6,7 @@ export default function Home() {
       <h3>h3</h3>
       <h4>h4</h4>
       <h5>h5</h5>
+      <button class='btn-primary'>Button</button>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
         blanditiis magnam deleniti temporibus laborum dolor, sequi suscipit,

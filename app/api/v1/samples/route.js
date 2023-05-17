@@ -9,6 +9,7 @@ export async function POST(request, res) {
   const cookies = request.cookies.getAll()
   const body = await request.json()
   const { email, password } = body
+
   const result = await sample.find({})
 
   return new Response(
