@@ -5,7 +5,7 @@ import { AddButton } from './addButton'
 import sample from '@/models/sample'
 
 async function getData() {
-  const res = await fetch('http://localhost:3000/api/v1/samples')
+  const res = await fetch(`${process.env.NEXT_PUBLIC_WEBSITE}/api/v1/samples`)
   return res.json()
 }
 const Create = async () => {
