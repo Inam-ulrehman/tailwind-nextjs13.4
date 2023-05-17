@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 async function getData() {
   const res = await fetch('http://localhost:3000/api/v1/samples', {
-    next: { revalidate: 10 },
+    // next: { revalidate: 10 },
   })
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
@@ -21,11 +21,18 @@ export default async function Component() {
 
   return (
     <div>
-      <Link href={'/samples'}>samples</Link>
-      <Link href={'/'}>home</Link>
+      <Link className='pr-3 ' href={'/samples'}>
+        samples
+      </Link>
+      <Link className='pr-3 ' href={'/samples/create'}>
+        create
+      </Link>
+      <Link className='pr-3 ' href={'/'}>
+        home
+      </Link>
       <h1>Details</h1>
-      {data.result.map((item) => {
-        return <div>name: {item.name}</div>
+      {data.result.map((item, index) => {
+        return <div key={index}>name: {item.name}</div>
       })}
     </div>
   )

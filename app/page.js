@@ -3,8 +3,15 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main className=''>
-      <Link href={'/samples'}>samples</Link>
-      <Link href={'/'}>home</Link>
+      <Link className='pr-3 ' href={'/samples'}>
+        samples
+      </Link>
+      <Link className='pr-3 ' href={'/samples/create'}>
+        create
+      </Link>
+      <Link className='pr-3 ' href={'/'}>
+        home
+      </Link>
       <h1>h1</h1>
       <h2>h2</h2>
       <h3>h3</h3>
