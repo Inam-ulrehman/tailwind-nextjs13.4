@@ -16,4 +16,5 @@ module.exports = {
     ],
   },
   exclude: ['/dashboard'],
+  changefreq: ['weekly'],
 }
