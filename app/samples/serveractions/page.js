@@ -1,5 +1,5 @@
 import { revalidatePath } from 'next/cache'
-import Link from 'next/link'
+
 import React from 'react'
 import { AddButton } from './addButton'
 import sample from '@/models/Sample'
@@ -14,21 +14,11 @@ const Create = async () => {
     'use server'
     const name = formData.get('name')
     const result = await sample.create({ name })
-    console.log(result)
 
     revalidatePath('/samples/create')
   }
   return (
     <div>
-      <Link className='pr-3 ' href={'/samples'}>
-        samples
-      </Link>
-      <Link className='pr-3 ' href={'/samples/create'}>
-        create
-      </Link>
-      <Link className='pr-3 ' href={'/'}>
-        home
-      </Link>
       <h1>create</h1>
       <form action={handleSubmit}>
         <div>

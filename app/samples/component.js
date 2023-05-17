@@ -24,9 +24,6 @@ export default async function Component() {
       <Link className='pr-3 ' href={'/samples'}>
         samples
       </Link>
-      <Link className='pr-3 ' href={'/samples/create'}>
-        create
-      </Link>
       <Link className='pr-3 ' href={'/'}>
         home
       </Link>
