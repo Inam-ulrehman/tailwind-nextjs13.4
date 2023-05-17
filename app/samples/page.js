@@ -32,7 +32,7 @@ const Sample = async () => {
         home
       </Link>
       <h1>Details</h1>
-      <List data={data} />
+      {/* <List data={data} /> */}
     </div>
   )
 }
