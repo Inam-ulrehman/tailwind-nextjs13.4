@@ -21,13 +21,3 @@ export async function POST(request, res) {
     JSON.stringify({ success: true, msg: 'post', result }, { status: 200 })
   )
 }
-
-// =============GET============== //
-
-export async function GET(request, res) {
-  await dbConnect()
-  const result = await sample.find({}).sort('-createdAT')
-
-  return NextResponse.json({ msg: 'hello', result }, { status: 200 })
-}
-// ============================== //

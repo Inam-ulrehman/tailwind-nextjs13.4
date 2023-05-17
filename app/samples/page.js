@@ -1,12 +1,37 @@
-import React from 'react'
-import Component from './component'
+import Link from 'next/link'
+import List from './list'
 
-const Samples = () => {
+async function getData() {
+  const res = await fetch('http://localhost:3000/api/v1/samples/static', {
+    // next: { revalidate: 10 },
+  })
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  // Recommendation: handle errors
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+
+  return res.json()
+}
+
+const Sample = async () => {
+  const data = await getData()
+
   return (
     <div>
-      <Component />
+      <Link className='pr-3 ' href={'/samples'}>
+        samples
+      </Link>
+      <Link className='pr-3 ' href={'/'}>
+        home
+      </Link>
+      <h1>Details</h1>
+      <List data={data} />
     </div>
   )
 }
 
-export default Samples
+export default Sample

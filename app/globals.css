@@ -33,6 +33,9 @@ body {
   h5 {
     @apply text-xl;
   }
+  a:hover {
+    @apply cursor-pointer;
+  }
 }
 @layer components {
   .btn-primary {
