@@ -1,23 +1,25 @@
 import mongoose from 'mongoose'
 
-const Sample = new mongoose.Schema(
+const SampleSchema = new mongoose.Schema(
   {
     name: {
       type: String,
+      required: [true, 'Please provide name'],
       lowercase: true,
       trim: true,
     },
     lastName: {
       type: String,
+      required: [true, 'Please provide lastName'],
       lowercase: true,
       trim: true,
     },
-    email: {
+    city: {
       type: String,
+      required: [true, 'Please provide city'],
       lowercase: true,
       trim: true,
     },
-
     // price: {
     //   type: Number,
     //   required: [true, 'Please provide price'],
@@ -54,7 +56,10 @@ const Sample = new mongoose.Schema(
     //   required: [true, 'Please provide quantity'],
     //   max: 1000,
     // },
-
+    // slot: {
+    //   startDate: { type: String, lowercase: true, trim: true },
+    //   endDate: { type: String, lowercase: true, trim: true },
+    // },
     // createdBy: {
     //   type: mongoose.Types.ObjectId,
     //   ref: 'User',
@@ -64,6 +69,4 @@ const Sample = new mongoose.Schema(
   { timestamps: true }
 )
 
-export default Sample
-
-// export default mongoose.models.Sample || mongoose.model('Sample', SampleSchema)
+export default mongoose.models.Sample || mongoose.model('Sample', SampleSchema)
