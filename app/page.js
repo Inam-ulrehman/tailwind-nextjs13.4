@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className=''>
+    <div className=''>
       <h1>h1</h1>
       <h2>h2</h2>
       <h3>h3</h3>
@@ -12,6 +12,6 @@ export default function Home() {
         blanditiis magnam deleniti temporibus laborum dolor, sequi suscipit,
         omnis aliquam reiciendis aspernatur voluptate impedit dolorum eaque?
       </p>
-    </main>
+    </div>
   )
 }
