@@ -1,28 +1,23 @@
 import Link from 'next/link'
-import Theme from './theme'
 
 const Navbar = () => {
   return (
     <nav>
-      <ul className='flex py-4'>
+      <ul className='flex gap-1'>
         <li>
-          <Link
-            className='p-2 ml-2 rounded-md border-2 hover:border-pink-300'
-            href={'/samples'}
-          >
-            samples
+          <Link className='p-1 ml-2 hover:border-b-2 ' href={'/'}>
+            Home
           </Link>
         </li>
         <li>
-          <Link
-            className='p-2 ml-2 rounded-md border-2 hover:border-pink-300'
-            href={'/'}
-          >
-            home
+          <Link className='p-1 ml-2 hover:border-b-2 ' href={'/samples'}>
+            Samples
+          </Link>
+          <Link className='p-1 ml-2 hover:border-b-2 ' href={'/contact'}>
+            Contact
           </Link>
         </li>
       </ul>
-      <Theme />
     </nav>
   )
 }
