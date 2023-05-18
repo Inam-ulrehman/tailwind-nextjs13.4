@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import Theme from './theme'
 
 const Navbar = () => {
   return (
@@ -22,6 +22,7 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+      <Theme />
     </nav>
   )
 }

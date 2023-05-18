@@ -1,8 +1,10 @@
 import './globals.css'
 import { Roboto } from 'next/font/google'
 import { Providers } from './providers'
-import Header from './componets/header/header'
+
 import Footer from './components/footer/footer'
+import Header from './components/header/header'
+import { getItemFromLocalStorage } from '@/lib/localStorage/localStorage'
 
 const inter = Roboto({ subsets: ['latin'], weight: ['400'] })
 
@@ -15,6 +17,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={inter.className}>
+        <div className='bg-white dark:bg-black'>
+          <h1 className='dark:text-white'>hello</h1>
+        </div>
         <Header />
         <main>
           <Providers>{children}</Providers>
