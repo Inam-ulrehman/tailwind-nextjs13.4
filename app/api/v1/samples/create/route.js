@@ -1,6 +1,6 @@
 import dbConnect from '@/lib/dbConnect'
 import mongooseErrorHandler from '@/lib/mongoose-error-handler'
-import Sample from '@/models/Sample'
+import Samples from '@/models/Samples'
 
 import { StatusCodes } from 'http-status-codes'
 
@@ -14,7 +14,7 @@ export async function POST(request, res) {
 
   console.log(body)
   try {
-    const result = await Sample.create({ name, city, lastName })
+    const result = await Samples.create({ name, city, lastName })
     return new Response(
       JSON.stringify({ success: true, msg: 'success.', result }),
       {
