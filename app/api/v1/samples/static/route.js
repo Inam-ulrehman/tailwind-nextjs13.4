@@ -8,7 +8,12 @@ export async function GET(request, res) {
   try {
     const result = await Samples.find()
     return new Response(
-      JSON.stringify({ success: true, msg: 'success.', result }),
+      JSON.stringify({
+        success: true,
+        msg: 'success.',
+        nbHits: result.length,
+        result,
+      }),
       {
         status: StatusCodes.OK,
       }
