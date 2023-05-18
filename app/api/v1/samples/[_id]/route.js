@@ -1,19 +1,15 @@
 import dbConnect from '@/lib/dbConnect'
 import mongooseErrorHandler from '@/lib/mongoose-error-handler'
 import Samples from '@/models/Samples'
-
 import { StatusCodes } from 'http-status-codes'
-
-export async function POST(request, res) {
-  const pathName = request.nextUrl.pathname
-  const searchParams = request.nextUrl.searchParams
-  const cookies = request.cookies.getAll()
-  const body = await request.json()
+export async function GET(request, res) {
   await dbConnect()
-  const { name, city, lastName } = body
+  const pathName = request.nextUrl.pathname
+  const _id = pathName.split('samples/')[1]
 
   try {
-    const result = await Samples.create({ name, city, lastName })
+    const result = await Samples.findById({ _id })
+
     return new Response(
       JSON.stringify({ success: true, msg: 'success.', result }),
       {
