@@ -6,8 +6,8 @@ const initialState = {
   email: '',
   isLoading: false,
 }
-export const carsThunk = createAsyncThunk(
-  'cars/carsThunk',
+export const samplesThunk = createAsyncThunk(
+  'samples/samplesThunk',
   async (_, thunkAPI) => {
     try {
       const response = await fetch('')
@@ -19,7 +19,7 @@ export const carsThunk = createAsyncThunk(
   }
 )
 
-const carsSlice = createSlice({
+const samplesSlice = createSlice({
   name: 'samples',
   initialState,
   reducers: {
@@ -40,21 +40,22 @@ const carsSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-      .addCase(carsThunk.pending, (state, { payload }) => {
+      .addCase(samplesThunk.pending, (state, { payload }) => {
         console.log('promise pending')
         state.isLoading = true
       })
-      .addCase(carsThunk.fulfilled, (state, { payload }) => {
+      .addCase(samplesThunk.fulfilled, (state, { payload }) => {
         console.log('promise fulfilled')
         console.log(payload)
         state.isLoading = false
       })
-      .addCase(carsThunk.rejected, (state, { payload }) => {
+      .addCase(samplesThunk.rejected, (state, { payload }) => {
         console.log('promise rejected')
         console.log(payload)
         state.isLoading = false
       })
   },
 })
-export const { createFunction, getStateValues, clearState } = carsSlice.actions
-export default carsSlice.reducer
+export const { createFunction, getStateValues, clearState } =
+  samplesSlice.actions
+export default samplesSlice.reducer
