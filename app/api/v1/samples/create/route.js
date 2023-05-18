@@ -23,5 +23,4 @@ export async function POST(request, res) {
   } catch (error) {
     return mongooseErrorHandler(error)
   }
-  // const result = ''
 }
