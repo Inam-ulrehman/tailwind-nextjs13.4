@@ -7,7 +7,7 @@ import Logo from './logo'
 
 const Footer = () => {
   return (
-    <footer className='grid border-2   '>
+    <footer className='grid border-t-2   '>
       <Logo />
       <div className='grid m-auto lg:grid-cols-3 py-5 '>
         <NavLinks />
